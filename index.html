@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>battalion forces manegment</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="header">
+    
+    <div id="div1" class="header">
         <h1 class="h1Header">
             BATTALION FORCES MANAGEMENT
         </h1>
         <div class="headerStripe"></div>
     </div>
- <div class="container">
+ <div id="div2" class="container">
     <div class="input-container">
         <div class="input-sun">
             <form>
@@ -26,8 +28,8 @@
                 <select id="status">
                     <option value="status">status</option>
                     <option value="Active">Active</option>
-                    <option value="reserve">Reserve</option>
-                    <option value="retired">retired</option>
+                    <option value="Reserve">Reserve</option>
+                    <option value="Retired">Retired</option>
                 </select>
                <button type="submit" id="submitBtn">Add Personal</button> 
             </form>
@@ -36,18 +38,16 @@
 
     </div>
 </div>
-<div class="tableHeader">
+<div id="div3" class="tableHeader">
     <h1 class="h2Header">
         FORCES OVERVIEW
     </h1>
     <div class="tableheaderStripe"></div>
 </div>
-
-
 <table id="soldier-table">
     <thead>
       <tr>
-        <th id="full-name">Full Name</th>
+        <th><button id="sortBtn">Full Name</button></th>
         <th>Rank</th>
         <th>Role</th>
         <th>Platoon</th>
@@ -58,10 +58,15 @@
     <tbody>
       
     </tbody>
-  </table>
-</div>
-<div id="edit-section" style="display:none;">
-    <h1>Edit Soldier</h1>
+</table>
+
+
+<div id="edit-section" class="header" style="display:none;">
+    <h1 class="h1Header">Edit Soldier</h1>
+    <div class="headerStripe"></div>
+    <div class="container">
+        <div class="input-container">
+            <div class="input-sun">
     <form id="edit-form">
       <input type="text" id="edit-full-name" placeholder="Full Name" required>
       <input type="text" id="edit-rank" placeholder="Rank" required>
@@ -74,10 +79,15 @@
         <option value="Retired">Retired</option>
       </select>
       <input type="number" id="edit-mission-time" placeholder="Mission Time (mins)" required>
-      <button type="submit">Save Changes</button>
+      <button id="saveEdit" type="submit">Save Changes</button>
       <button type="button" id="back-to-home">Back to Home</button>
     </form>
-  </div>
+          </div>
+       </div>
+    </div>
+    
+
+</div>
 
     
 </body>
